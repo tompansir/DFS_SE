@@ -231,6 +231,6 @@ If you use this framework in your research, please cite:
   title={DFS-SE: Dual-Branch Attention Framework for CIFAR Classification},
   author={Enze Pan},
   year={2026},
-  url={https://github.com/tompansir/DFS_SE.git}
+  url={https://github.com/tompansir/DFSSE.git}
 }
 ```
