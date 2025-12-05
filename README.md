@@ -21,13 +21,19 @@
 
 ## Installation
 
-1. Clone the Repository
+1. Create Conda Environment
+```bash
+conda create -n py313 python=3.13
+conda activate py313
+```
+
+2. Clone the Repository 
 ```bash
 git clone https://github.com/tompansir/DFSSE.git
 cd DFSSE
 ```
 
-2. Install Dependencies
+3. Install Dependencies
 Using uv (recommended for faster installation):
 ```bash
 uv pip install -e .
@@ -99,7 +105,6 @@ DFS-SE is a high-performance deep learning framework designed for image classifi
 - **Strong Performance**: 73.72% Top-1 accuracy on CIFAR-100 (3.42% improvement over baseline) and 92.06% on CIFAR-10 (2.13% improvement)
 - **Adaptive Data Augmentation**: Class-specific augmentation strategies (low/mid/high performance classes) to address classification imbalance
 - **Self-Distillation Training**: Incorporates knowledge distillation with warm-up strategy to improve generalization
-- **Reproducibility**: Configurable random seeds, detailed logging, and checkpointing for consistent experimental results
 
 
 ## Performance Improvement Summary
@@ -212,12 +217,7 @@ DFS-SE is a high-performance deep learning framework designed for image classifi
    - Moderate augmentation for mid-performance classes
    - Light augmentation for high-performance classes (e.g., 'apple', 'bicycle')
 
-3. **Self-Distillation Training**:
-   - Knowledge distillation with temperature scaling (T=3.0)
-   - Warm-up strategy (3 epochs) before introducing distillation loss
-   - Gradual increase of distillation weight (α) to 0.1 for stable training
-
-4. **End-to-End Pipeline**: Integrated data downloading, organization, augmentation, training, and evaluation with detailed logging
+3. **End-to-End Pipeline**: Integrated data downloading, organization, augmentation, training, and evaluation with detailed logging
 
 
 ## Conclusion
@@ -227,7 +227,7 @@ The DFS_SE framework achieves state-of-the-art performance on CIFAR datasets thr
 ## Citation
 If you use this framework in your research, please cite:
 ```plaintext
-@misc{dfs-se2024,
+@misc{dfsse2026,
   title={DFS-SE: Dual-Branch Attention Framework for CIFAR Classification},
   author={Enze Pan},
   year={2026},
